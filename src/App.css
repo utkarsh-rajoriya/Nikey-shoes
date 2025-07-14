@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import "tailwindcss";
+
+@layer utilities {
+  .Nike {
+    font-family: "Anton", sans-serif;
+    font-weight: 600;
+    color: white;
+  }
+
+  .bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 100;
+  }
+
+  .cubes{
+    @apply hover:text-[#C11912] hover:bg-white text-sm w-8 h-8 border-1 text-white tracking-wide  transition ease-in border-white flex justify-center items-center
+  }
+
+  .shoe-img{
+    filter: drop-shadow( 0rem  0rem 4rem #fff);
+  }
+}
+
