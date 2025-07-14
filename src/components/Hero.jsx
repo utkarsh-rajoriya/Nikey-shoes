@@ -1,7 +1,7 @@
 import redJordan from "../assets/Red-Jordan.png";
 import blueJordan from "../assets/Blue-Jordan.png";
 import { useState } from "react";
-import { motion } from "motion/react"
+import { hover, motion } from "motion/react"
 
 const Hero = () => {
 
@@ -33,8 +33,8 @@ let previousPage = () =>{
 }
 
   return (
-    <motion.div className={`Hero w-full bg-[${shoes[page].background}]`}>
-      <div className=" min-h-[780px] grid grid-cols-1 md:grid-cols-3">
+    <div className="overflow-hidden w-full" style={{ backgroundColor: shoes[page].background}}>
+      <div className="lg:min-h-[100vh]  max-md:min-h-[780px] grid grid-cols-1 md:grid-cols-3">
         {/* Grid-1 */}
         <div className="z-10 pt-[7rem] md:pt-[5rem] flex flex-col justify-center max-md:items-center md:pl-[3rem] lg:pl-[6rem] gap-4">
           <h1 className="bebas-neue-regular text-4xl text-white tracking-wide">
@@ -62,28 +62,28 @@ let previousPage = () =>{
           <div className="w-50 md:w-30 lg:w-50 grid grid-cols-5 md:grid-cols-3 lg:grid-cols-5 gap-2 ">
             
             <div className="flex flex-col justify-center gap-2">
-              <div className={`cubes hover:text-[${shoes[page].background}] hover:bg-white`}>sm</div>
-              <div className={`cubes hover:text-[${shoes[page].background}] hover:bg-white`}>9</div>
+              <div className="cubes hover:bg-white hover:text-black">sm</div>
+              <div className="cubes hover:bg-white hover:text-black">9</div>
             </div>
 
             <div className="flex flex-col justify-center gap-2">
-              <div className={`cubes hover:text-[${shoes[page].background}] hover:bg-white`}>md</div>
-              <div className={`cubes hover:text-[${shoes[page].background}] hover:bg-white`}>10</div>
+              <div className="cubes hover:bg-white hover:text-black">md</div>
+              <div className="cubes hover:bg-white hover:text-black">10</div>
             </div>
 
             <div className="flex flex-col justify-center gap-2">
-              <div className={`cubes hover:text-[${shoes[page].background}] hover:bg-white`}>lg</div>
-              <div className={`cubes hover:text-[${shoes[page].background}] hover:bg-white`}>11</div>
+              <div className="cubes hover:bg-white hover:text-black">lg</div>
+              <div className="cubes hover:bg-white hover:text-black">11</div>
             </div>
 
             <div className="flex flex-col justify-center gap-2">
-              <div className={`cubes hover:text-[${shoes[page].background}] hover:bg-white`}>xl</div>
-              <div className={`cubes hover:text-[${shoes[page].background}] hover:bg-white`}>12</div>
+              <div className="cubes hover:bg-white hover:text-black">xl</div>
+              <div className="cubes hover:bg-white hover:text-black">12</div>
             </div>
 
             <div className="flex flex-col justify-center gap-2">
-              <div className={`cubes hover:text-[${shoes[page].background}] hover:bg-white`}>8</div>
-              <div className={`cubes hover:text-[${shoes[page].background}] hover:bg-white`}>13</div>
+              <div className="cubes hover:bg-white hover:text-black">8</div>
+              <div className="cubes hover:bg-white hover:text-black">13</div>
             </div>
           </div>
 
@@ -98,7 +98,7 @@ let previousPage = () =>{
           </h1>
           </div>
           
-          <img src={shoes[page].image} className="shoe-img brightness-110 max-md:min-w-[200px] md:min-w-[500px] xl:max-w-[700px] z-30 absolute lg:top-12" ></img>
+          <img src={shoes[page].image} className="shoe-img brightness-110 max-md:min-w-[200px] md:min-w-[400px] lg:min-w-[500px] xl:max-w-[700px] z-30 absolute lg:top-12" ></img>
         </div>
         
 
@@ -110,16 +110,16 @@ let previousPage = () =>{
           </p>
 
           <div className="py-5 pt-3 flex flex-row gap-4 max-lg:justify-center">
-              <button className="hover:text-[#C11912] hover:bg-white text-sm w-10 h-10 rounded-full border-1 text-white tracking-wide  transition ease-in border-white flex justify-center items-center" onClick={previousPage} disabled={page === 0}>
+              <button className="hover:text-[#000] hover:bg-white text-sm w-10 h-10 rounded-full border-1 text-white tracking-wide  transition ease-in border-white flex justify-center items-center" onClick={previousPage} disabled={page === 0}>
                   <i className="fa-solid fa-arrow-left-long"></i>
               </button>
-              <button className="hover:text-[#C11912] hover:bg-white text-sm w-10 h-10 rounded-full border-1 text-white tracking-wide  transition ease-in border-white flex justify-center items-center" onClick={nextPage} disabled={page === shoes.length-1}>
+              <button className="hover:text-[#000] hover:bg-white text-sm w-10 h-10 rounded-full border-1 text-white tracking-wide  transition ease-in border-white flex justify-center items-center" onClick={nextPage} disabled={page === shoes.length-1}>
                   <i className="fa-solid fa-arrow-right-long"></i>
               </button>
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
