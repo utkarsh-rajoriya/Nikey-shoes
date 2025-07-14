@@ -3,7 +3,7 @@ import logo from "../assets/pngwing.com.png"
 
 const Navbar = (props) => {
   return (
-    <div className="w-full px-3 absolute top-0 flex justify-evenly items-center gap-[2rem]">
+    <div className="z-50 w-full px-3 absolute top-0 flex justify-evenly items-center gap-[2rem]">
         <div>
         <img src={logo} className="w-25"></img>
         </div>
