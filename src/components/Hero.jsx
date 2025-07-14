@@ -10,13 +10,15 @@ const Hero = () => {
   const shoes = [
   {
     name : "Jordan Red",
+    color : "Red",
     image : redJordan,
     background : "#C11912"
   },
   {
     name : "Jordan Blue",
+    color : "Blue",
     image : blueJordan,
-    background : "#0000ff"
+    background : "#004489"
   }
 ]
 
@@ -31,7 +33,7 @@ let previousPage = () =>{
 }
 
   return (
-    <motion.div className="Hero w-full bg-[#C11912]">
+    <motion.div className={`Hero w-full bg-[${shoes[page].background}]`}>
       <div className=" min-h-[780px] grid grid-cols-1 md:grid-cols-3">
         {/* Grid-1 */}
         <div className="z-10 pt-[7rem] md:pt-[5rem] flex flex-col justify-center max-md:items-center md:pl-[3rem] lg:pl-[6rem] gap-4">
@@ -47,7 +49,7 @@ let previousPage = () =>{
               <br />
               color way
               <br />
-              red
+              {shoes[page].color}
             </p>
           </div>
 
@@ -60,28 +62,28 @@ let previousPage = () =>{
           <div className="w-50 md:w-30 lg:w-50 grid grid-cols-5 md:grid-cols-3 lg:grid-cols-5 gap-2 ">
             
             <div className="flex flex-col justify-center gap-2">
-              <div className="cubes">sm</div>
-              <div className="cubes">9</div>
+              <div className={`cubes hover:text-[${shoes[page].background}] hover:bg-white`}>sm</div>
+              <div className={`cubes hover:text-[${shoes[page].background}] hover:bg-white`}>9</div>
             </div>
 
             <div className="flex flex-col justify-center gap-2">
-              <div className="cubes">md</div>
-              <div className="cubes">10</div>
+              <div className={`cubes hover:text-[${shoes[page].background}] hover:bg-white`}>md</div>
+              <div className={`cubes hover:text-[${shoes[page].background}] hover:bg-white`}>10</div>
             </div>
 
             <div className="flex flex-col justify-center gap-2">
-              <div className="cubes">lg</div>
-              <div className="cubes">11</div>
+              <div className={`cubes hover:text-[${shoes[page].background}] hover:bg-white`}>lg</div>
+              <div className={`cubes hover:text-[${shoes[page].background}] hover:bg-white`}>11</div>
             </div>
 
             <div className="flex flex-col justify-center gap-2">
-              <div className="cubes">xl</div>
-              <div className="cubes">12</div>
+              <div className={`cubes hover:text-[${shoes[page].background}] hover:bg-white`}>xl</div>
+              <div className={`cubes hover:text-[${shoes[page].background}] hover:bg-white`}>12</div>
             </div>
 
             <div className="flex flex-col justify-center gap-2">
-              <div className="cubes">8</div>
-              <div className="cubes">13</div>
+              <div className={`cubes hover:text-[${shoes[page].background}] hover:bg-white`}>8</div>
+              <div className={`cubes hover:text-[${shoes[page].background}] hover:bg-white`}>13</div>
             </div>
           </div>
 
@@ -91,7 +93,7 @@ let previousPage = () =>{
         {/* Grid-2 */}
         <div className="z-20 mt-[4rem] relative flex flex-col justify-center items-center">
           <div className="overflow-hidden">
-          <h1 className="Nike text-[14.1rem] lg:text-[22rem] text-center">
+          <h1 className="Nike text-[14.5rem] lg:text-[22rem] text-center">
             NIKE
           </h1>
           </div>
