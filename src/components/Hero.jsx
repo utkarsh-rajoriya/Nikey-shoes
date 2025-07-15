@@ -75,7 +75,19 @@ const Hero = () => {
 
       <div className="lg:min-h-[100vh]  max-md:min-h-[780px] grid grid-cols-1 md:grid-cols-3">
         {/* Grid-1 */}
-        <div className="z-10 pt-[7rem] md:pt-[5rem] flex flex-col justify-center max-md:items-center md:pl-[3rem] lg:pl-[6rem] gap-4">
+        <motion.div
+          className="z-10 pt-[7rem] md:pt-[5rem] flex flex-col justify-center max-md:items-center md:pl-[3rem] lg:pl-[6rem] gap-4"
+          animate={{
+            y: [-300, 0],
+          }}
+          transition={{
+            delay: 0.2,
+            duration: 1,
+            type: "spring",
+            damping: 8,
+            stiffness: 100,
+          }}
+        >
           <h1 className="bebas-neue-regular text-4xl text-white tracking-wide">
             {shoes[page].name}
           </h1>
@@ -124,7 +136,7 @@ const Hero = () => {
               <div className="cubes hover:bg-white hover:text-black">13</div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Grid-2 */}
         <div className="z-20 mt-[4rem] relative flex flex-col justify-center items-center">
@@ -153,7 +165,19 @@ const Hero = () => {
         </div>
 
         {/* Grid-3 */}
-        <div className="z-20 flex flex-col justify-center items-center md:pt-[20rem] md:pl-[3rem]">
+        <motion.div
+          className="z-20 flex flex-col justify-center items-center md:pt-[20rem] md:pl-[3rem]"
+          whileInView={{
+            scale : [0,1]
+          }}
+          transition={{
+            delay: 0.2,
+            duration: 1,
+            type: "spring",
+            damping: 8,
+            stiffness: 100,
+          }}
+        >
           <p className="w-55 md:w-40 lg:w-80  text-white text-center">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, eionem
             sit amet consectetur.
@@ -175,7 +199,7 @@ const Hero = () => {
               <i className="fa-solid fa-arrow-right-long"></i>
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
