@@ -22,5 +22,9 @@
   .shoe-img{
     filter: drop-shadow( 0rem  0rem 4rem #fff);
   }
+
+  .loading-screen{
+    @apply absolute top-0 w-full h-[100vh] bg-black rounded-b-[8rem] lg:rounded-b-[30%]
+  }
 }
 

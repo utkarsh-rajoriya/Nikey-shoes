@@ -4,7 +4,7 @@ import greenJordan from "../assets/Green-Jordan.png";
 import yellowJordan from "../assets/Yellow-Jordan.png";
 import greyJordan from "../assets/Grey-Jordan.png";
 import { useState } from "react";
-import { AnimatePresence, hover, motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 
 const Hero = () => {
   const [page, setPage] = useState(0);
