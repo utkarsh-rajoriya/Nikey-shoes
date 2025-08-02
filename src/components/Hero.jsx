@@ -1,8 +1,3 @@
-import redJordan from "../assets/Red-Jordan.png";
-import blueJordan from "../assets/Blue-Jordan.png";
-import greenJordan from "../assets/Green-Jordan.png";
-import yellowJordan from "../assets/Yellow-Jordan.png";
-import greyJordan from "../assets/Grey-Jordan.png";
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
@@ -14,31 +9,31 @@ const Hero = () => {
     {
       name: "Jordan Red",
       color: "Red",
-      image: redJordan,
+      image: "https://res.cloudinary.com/dtf1quyas/image/upload/v1754109203/Red-Jordan_u1hblf.png",
       background: "#C11912",
     },
     {
       name: "Jordan Blue",
       color: "Blue",
-      image: blueJordan,
+      image: "https://res.cloudinary.com/dtf1quyas/image/upload/v1754109203/Blue-Jordan_cviyxz.png",
       background: "#004489",
     },
     {
       name: "Jordan Green",
       color: "Green",
-      image: greenJordan,
+      image: "https://res.cloudinary.com/dtf1quyas/image/upload/v1754109204/Green-Jordan_ft3goh.png",
       background: "#02541d",
     },
     {
       name: "Jordan Yellow",
       color: "Yellow",
-      image: yellowJordan,
+      image: "https://res.cloudinary.com/dtf1quyas/image/upload/v1754109204/Yellow-Jordan_tqaofg.png",
       background: "#90a327",
     },
     {
       name: "Jordan Grey",
       color: "Grey",
-      image: greyJordan,
+      image: "https://res.cloudinary.com/dtf1quyas/image/upload/v1754109204/Grey-Jordan_t78883.png",
       background: "#1c1c1b",
     },
   ];
