@@ -6,13 +6,14 @@ const Hero = () => {
   const [dirx, setDirx] = useState(0);
 
   useEffect(() =>{
-    const preNextImage =() =>{
-      if(page+1 < shoes.length){
+    const preLoadImages =(index) =>{
+      if(index > 0 && index < shoes.length ){
         const img = new Image();
-        img.src = shoes[page + 1].image;
+        img.src = shoes[index].image;
       }
     }
-    preNextImage();
+    preLoadImages(page+1)
+    preLoadImages(page-1)
   },[page])
 
   const shoes = [
