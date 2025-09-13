@@ -1,9 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
 const Hero = () => {
   const [page, setPage] = useState(0);
   const [dirx, setDirx] = useState(0);
+
+  useEffect(() =>{
+    const preNextImage =() =>{
+      if(page+1 < shoes.length){
+        const img = new Image();
+        img.src = shoes[page + 1].image;
+      }
+    }
+    preNextImage();
+  },[page])
 
   const shoes = [
     {
