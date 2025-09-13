@@ -9,31 +9,31 @@ const Hero = () => {
     {
       name: "Jordan Red",
       color: "Red",
-      image: "https://res.cloudinary.com/dtf1quyas/image/upload/v1754109203/Red-Jordan_u1hblf.png",
+      image: "https://res.cloudinary.com/dtf1quyas/image/upload/f_auto,q_auto/v1754109203/Red-Jordan_u1hblf.png",
       background: "#C11912",
     },
     {
       name: "Jordan Blue",
       color: "Blue",
-      image: "https://res.cloudinary.com/dtf1quyas/image/upload/v1754109203/Blue-Jordan_cviyxz.png",
+      image: "https://res.cloudinary.com/dtf1quyas/image/upload/f_auto,q_auto/v1754109203/Blue-Jordan_cviyxz.png",
       background: "#004489",
     },
     {
       name: "Jordan Green",
       color: "Green",
-      image: "https://res.cloudinary.com/dtf1quyas/image/upload/v1754109204/Green-Jordan_ft3goh.png",
+      image: "https://res.cloudinary.com/dtf1quyas/image/upload/f_auto,q_auto/v1754109204/Green-Jordan_ft3goh.png",
       background: "#02541d",
     },
     {
       name: "Jordan Yellow",
       color: "Yellow",
-      image: "https://res.cloudinary.com/dtf1quyas/image/upload/v1754109204/Yellow-Jordan_tqaofg.png",
+      image: "https://res.cloudinary.com/dtf1quyas/image/upload/f_auto,q_auto/v1754109204/Yellow-Jordan_tqaofg.png",
       background: "#90a327",
     },
     {
       name: "Jordan Grey",
       color: "Grey",
-      image: "https://res.cloudinary.com/dtf1quyas/image/upload/v1754109204/Grey-Jordan_t78883.png",
+      image: "https://res.cloudinary.com/dtf1quyas/image/upload/f_auto,q_auto/v1754109204/Grey-Jordan_t78883.png",
       background: "#1c1c1b",
     },
   ];
@@ -56,7 +56,7 @@ const Hero = () => {
       <AnimatePresence mode="wait">
         <motion.div
           key={shoes[page].background}
-          className="absolute w-full h-full lg:min-h-[100vh] max-md:min-h-[970px] max-lg:max-h-[550px] z-0"
+          className="absolute w-full h-full max-md:min-h-[970px] max-lg:max-h-[550px] z-0"
           style={{ backgroundColor: shoes[page].background }}
           initial={{ scale: 0.4 }}
           animate={{ scale: 1 }}

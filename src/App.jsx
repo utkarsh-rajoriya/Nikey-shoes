@@ -2,7 +2,7 @@ import "./App.css";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import FollowCursor from "./stylings/FollowCursor";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 import GlitchText from "./stylings/GlitchText";
 import { useEffect, useState } from "react";
 
