@@ -79,7 +79,7 @@ const Hero = () => {
         />
       </AnimatePresence>
 
-      <div className="lg:min-h-[100vh]  max-md:min-h-[780px] grid grid-cols-1 md:grid-cols-3">
+      <div className="lg:min-h-[100vh] max-md:min-h-[780px] grid grid-cols-1 md:grid-cols-3">
         {/* Grid-1 */}
         <motion.div
           className="z-10 pt-[7rem] md:pt-[5rem] flex flex-col justify-center max-md:items-center md:pl-[3rem] lg:pl-[6rem] gap-4"
@@ -147,7 +147,7 @@ const Hero = () => {
         {/* Grid-2 */}
         <div className="z-20 mt-[4rem] relative flex flex-col justify-center items-center">
           <div className="overflow-hidden">
-            <h1 className="Nike text-[14.5rem] lg:text-[22rem] text-center">
+            <h1 className="Nike text-white text-[14.5rem] lg:text-[22rem] text-center">
               NIKE
             </h1>
           </div>

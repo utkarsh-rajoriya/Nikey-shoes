@@ -3,8 +3,8 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import FollowCursor from "./stylings/FollowCursor";
 import { motion } from "motion/react";
-import GlitchText from "./stylings/GlitchText";
 import { useEffect, useState } from "react";
+import NikeLoader from "./components/NikeLoader";
 
 const App = () => {
   const [showContent , setShowContent] = useState(false);
@@ -12,33 +12,16 @@ const App = () => {
   useEffect(() => {
     setTimeout(() =>{
       setShowContent(true)
-    },3000)
+    },1900)
   }, [])
   
 
   return (
     <div>
 
-      <motion.div
-        className="z-100 loading-screen flex justify-center items-center"
-        animate={{
-          y: [0, -300, -700],
-          opacity: [1, 0.5, 0],
-        }}
-        transition={{
-          delay: 3,
-          duration: 1,
-        }}
-      >
-        <GlitchText
-          speed={1}
-          enableShadows={true}
-          enableOnHover={false}
-          className="custom-class"
-        >
-          Nike
-        </GlitchText>
-      </motion.div>
+     {!showContent && <div>
+        <NikeLoader/>
+      </div>}
 
       {showContent && <motion.div
         className="z-10"
